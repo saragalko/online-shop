@@ -69,7 +69,7 @@ class ProductImage(models.Model):
 class Cart(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
-    count = models.PositiveIntegerField()
+    count = models.PositiveIntegerField(null=True, blank=True)
 
 
 class Order(models.Model):
@@ -130,4 +130,3 @@ class Cashback(models.Model):
 
     def __str__(self):
         return str(self.percent)
-
