@@ -11,7 +11,6 @@ class TestLoginView(APIView):
         return Response('darova')
 
 
-
 class ActivateUser(UserViewSet):
     def get_serializer(self, *args, **kwargs):
         serializer_class = self.get_serializer_class()
