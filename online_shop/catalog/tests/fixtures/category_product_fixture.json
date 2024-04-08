@@ -1,0 +1,58 @@
+[
+{
+    "model": "catalog.product",
+    "pk": 2,
+    "fields": {
+        "name": "Кофемашина",
+        "article": "6458158465165",
+        "description": "Лучший подарок для кофеманов\r\nПрослужит не один день",
+        "count_on_stock": 588,
+        "price": "294.55",
+        "discount": null,
+        "category": 1,
+        "seller": 3
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 3,
+    "fields": {
+        "name": "Рубашка гавайская",
+        "article": "71842928256542",
+        "description": "Лучшая гавайская рубашка с лучшим принтов твоих слез о отпуске\r\nБерут все те, кто работает без отдыха",
+        "count_on_stock": 454,
+        "price": "55.33",
+        "discount": null,
+        "category": 2,
+        "seller": 2
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 4,
+    "fields": {
+        "name": "Лежанка для пса",
+        "article": "8393620",
+        "description": "Мягкая и лучшая",
+        "count_on_stock": 30,
+        "price": "66.47",
+        "discount": 2,
+        "category": 4,
+        "seller": 3
+    }
+},
+{
+    "model": "catalog.product",
+    "pk": 5,
+    "fields": {
+        "name": "Платье твоей мечты",
+        "article": "6281984",
+        "description": "Лучшего качеста и для лучшей женщины",
+        "count_on_stock": 66,
+        "price": "965.50",
+        "discount": 1,
+        "category": 3,
+        "seller": 2
+    }
+}
+]
