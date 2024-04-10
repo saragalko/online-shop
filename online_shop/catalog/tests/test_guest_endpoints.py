@@ -42,12 +42,21 @@ class TestGuestEndpoints(APITestCase):
         ]
 
     def test_category_product_endpoints(self):
-        url = reverse('category-products')
-        response = self.client.get(url, category_id=1)
+        url = reverse('category-products', kwargs={'category_id': 1})
+        response = self.client.get(url)
         assert response.status_code == 200
         assert isinstance(response.data, list)
         print(response.data)
-        assert response.data == []
+        assert response.data == [
+            {
+                'id': 2,
+                'name': EVERYTHING_EQUALS_NOT_NONE,
+                'price': '294.55',
+                'article': EVERYTHING_EQUALS_NOT_NONE,
+                'images': []
+            }
+        ]
+
 
     def test_discount_endpoints(self):
         url = reverse('discounts')

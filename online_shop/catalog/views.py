@@ -7,6 +7,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.db.models import F
+from catalog.tasks import some_task
 
 
 class CategoryListView(ListAPIView):
@@ -21,6 +22,7 @@ class CategoryProductsView(APIView):
     def get(self, request, category_id):
         queryset = Product.objects.filter(category__id=category_id)
         serializer = ProductSerializer(queryset, many=True)
+        some_task.delay()
         return Response(serializer.data)
 
 
