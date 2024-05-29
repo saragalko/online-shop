@@ -209,3 +209,9 @@ SWAGGER_SETTINGS = {
         }
     }
 }
+
+
+TELEGRAM_API_KEY = env('TELEGRAM_API_KEY')
+BACKEND_URL = env('BACKEND_URL')
+AUTH_URL = env('AUTH_URL')
+CART_URL = env('CART_URL')
