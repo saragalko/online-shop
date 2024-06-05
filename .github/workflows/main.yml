@@ -21,3 +21,7 @@ jobs:
       - name: Set up .env
         run: |
           echo "${{secrets.ENW_FILE}}" > online_shop/.env
+
+      - name: Run DB
+        run: |
+          docker-compose -f online_shop/docker-compose.yml up -d db
