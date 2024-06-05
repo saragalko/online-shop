@@ -20,7 +20,7 @@ jobs:
 
       - name: Set up .env
         run: |
-          echo "${{secrets.ENW_FILE}}" > online_shop/.env
+          echo "${{secrets.ENV_FILE}}" > online_shop/.env
 
       - name: Run DB
         run: |
